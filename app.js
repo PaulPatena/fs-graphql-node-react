@@ -6,10 +6,13 @@ const mongoose = require('mongoose');
 
 const graphQlSchema = require('./graphql/schema/index');
 const graphQlResolvers = require('./graphql/resolvers/index');
+const authMw = require('./middleware/auth-mw');
 
 dotenv.config();
 const app = express();
 app.use(bodyParser.json());
+
+app.use(authMw); // Use authentication mw prior to API handling
 
 app.use('/graphql', graphqlHTTP({
   schema: graphQlSchema,
