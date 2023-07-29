@@ -16,12 +16,12 @@ module.exports = (req, res, next) => {
     if (!decodedToken) {
       throw new Error('Invalid jwt token.')
     }
+
+    req.isAuth = true;
+    req.userId = decodedToken.userId;
+    next();
   } catch (err) {
     req.isAuth = false;
     return next();
   }
-
-  req.isAuth = true;
-  req.userId = decodedToken.userId;
-  next();
 };

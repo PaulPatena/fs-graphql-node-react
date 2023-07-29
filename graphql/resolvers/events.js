@@ -5,7 +5,7 @@ const { transformEvent } = require('./common');
 module.exports = {
   events: async () => {
     try {
-      const events = await Event.find()
+      const events = await Event.find({})
       // .populate('creator') // auto-populate/pull data for relational fields (foreignKey)
 
       return events.map(event => (transformEvent(event)));

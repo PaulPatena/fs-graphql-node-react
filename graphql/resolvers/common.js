@@ -1,4 +1,5 @@
 const User = require('../../models/user');
+const Event = require('../../models/events');
 
 const dateToString = date => new Date(date).toISOString();
 
@@ -22,7 +23,6 @@ const getUserById = async userId => {
 
 const getEvents = async eventIds => {
   try {
-    console.log(eventIds);
     const events = await Event.find({_id: {$in: eventIds}})
 
     return events.map(event => ({
