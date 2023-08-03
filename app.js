@@ -12,6 +12,17 @@ dotenv.config();
 const app = express();
 app.use(bodyParser.json());
 
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(200);
+  }
+  next(); // continue API processing to gQL
+});
+
 app.use(authMw); // Use authentication mw prior to API handling
 
 app.use('/graphql', graphqlHTTP({

@@ -1,0 +1,130 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  flex: 1 0 0;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 100%;
+}
+
+footer {
+  width: 100%;
+  height: 80px;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightskyblue;
+}
+
+footer img {
+  margin-left: 0.5rem;
+}
+
+footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav {
+  background-color: lightskyblue;
+}
+
+code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+h2 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.typographyHeadingsXl {
+  font-size: 36px;
+  line-height: 44px;
+}
+.typographyHeadingsLg {
+  font-size: 32px;
+  line-height: 40px;
+}
+.typographyHeadingsMd {
+  font-size: 28px;
+  line-height: 36px;
+}
+.typographyHeadingsSm {
+  font-size: 24px;
+  line-height: 32px;
+}
+.typographyLabelsLg {
+  font-size: 18px;
+  line-height: 24px;
+}
+.typographyLabelsMd {
+  font-size: 16px;
+  line-height: 20px;
+}
+.typographyLabelsSm {
+  font-size: 14px;
+  line-height: 16px;
+}
+.typographyLabelsXs {
+  font-size: 12px;
+  line-height: 16px;
+}
+.typographyParagraphsLg {
+  font-size: 18px;
+  line-height: 28px;
+}
+.typographyParagraphsMd {
+  font-size: 16px;
+  line-height: 24px;
+}
+.typographyParagraphsSm {
+  font-size: 14px;
+  line-height: 20px;
+}
+.typographyParagraphsXs {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+input {
+  font-size: 16px;
+  line-height: 20px;
+  padding: 8px;
+}
+.fieldContainer {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.fieldLabel {
+  margin-bottom: 4px;
+}
+
+button {
+  font-size: 14px;
+  min-height: 36px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
