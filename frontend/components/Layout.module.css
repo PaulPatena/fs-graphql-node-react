@@ -30,9 +30,11 @@
 }
 
 .navButtonActive {
-    background-color: orangered;
-    color: whitesmoke;
-    border-radius: 0.25rem;
+    /*background-color: orangered;*/
+    /*color: whitesmoke;*/
+    /*border-radius: 0.25rem;*/
+    border-bottom: 1px solid orangered;
+    /*box-shadow: 1px 1px 5px 1px rgba(17, 12, 46, 0.15);*/
 }
 
 .navItemMR {

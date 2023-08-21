@@ -1,24 +1,25 @@
 import '@/styles/global.css';
 import type { AppProps } from 'next/app';
 import Layout from '@/components/Layout';
-import { Context, createContext, useState } from 'react';
+import { Context, createContext, useContext, useState } from 'react';
 
 interface IAuthContext {
-  token: string;
-  onTokenReceived: (token: string) => void;
+  authToken: string;
+  setAuthToken: (token: string) => void;
 }
 
-export const AuthContext: Context<IAuthContext> = createContext({token: '', onTokenReceived: (token)=>{}});
+const AuthContext: Context<IAuthContext> = createContext({authToken: '', setAuthToken: (token)=>{}});
+
+export function useAuth() {
+  return useContext(AuthContext);
+}
 
 export default function MyApp({ Component, pageProps }: AppProps) {
 
   const [authToken, setAuthToken] = useState('');
-  const tokenReceivedHandler = (token: string) => {
-    setAuthToken(token);
-  }
 
   return (
-    <AuthContext.Provider value={{token: authToken, onTokenReceived: tokenReceivedHandler}}>
+    <AuthContext.Provider value={{authToken: authToken, setAuthToken}}>
       <Layout>
         <Component {...pageProps} />
       </Layout>

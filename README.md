@@ -7,6 +7,8 @@ Steps to run in dev mode:
 1. npm install
 2. rename .env-sample to .env and set your environment/project variables.
 3. npm start
+4. optionally use the graphQL UI at http://localhost:4000/graphql
+
 
 Testing with authentication
 You can use postman to attach jwt to endpoints requiring auth.

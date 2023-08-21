@@ -31,9 +31,9 @@ module.exports = {
     return { userId: user.id, token: token, tokenExpiration: 1 };
   },
   createUser: async (args, req) => {
-    if (!req.isAuth) {
-      throw new Error('Unauthenticated.');
-    }
+    // if (!req.isAuth) {
+    //   throw new Error('Unauthenticated.');
+    // }
     try {
       // Note: always return a PROMISE in your mutation
       const user = await User.findOne({email: args.userInput.email})

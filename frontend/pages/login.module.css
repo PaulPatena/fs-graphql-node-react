@@ -1,3 +1,20 @@
 .loginContainer {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.formOuter {
+    width: 100%;
+    min-width: 25rem;
+    max-width: 50rem;
+}
+
+.formInner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
