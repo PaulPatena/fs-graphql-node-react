@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import Image from 'next/image';
+// import Image from 'next/image';
 import React, { useMemo } from 'react';
 import styles from './Layout.module.css';
 import Cx from 'classnames';
@@ -35,6 +35,8 @@ const Layout: React.FC<Props> = ({ children }) => {
         {/*<link rel="icon" href="/favicon.ico" />*/}
       </Head>
       <nav className={styles.nav}>
+        <h2>Events page</h2>
+        <div className="horizontalSpacer"/>
         {pathsToRender.map((path: {url: string, name: string}) => {
           return (
             <Link key={path.url} href={path.url} className={styles.navItemMR}>
@@ -44,13 +46,14 @@ const Layout: React.FC<Props> = ({ children }) => {
             </Link>
           )
         })}
-        <div className="horizontalSpacer"/>
+
         {auth.authToken.length > 0 &&
-          <button onClick={(e)=> {
-            e.preventDefault();
-            auth.setAuthToken('');
-            router.push('/login')
-          }}>
+          <button className={styles.navButton}
+            onClick={(e)=> {
+              e.preventDefault();
+              auth.setAuthToken('');
+              router.push('/login')
+            }}>
             Logout
           </button>
         }
